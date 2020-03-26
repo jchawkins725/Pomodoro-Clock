@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Beep from './beep.mp3';
 
 class BreakDisplay extends React.Component {
   render () {
@@ -144,7 +145,7 @@ class App extends React.Component {
         <SessionDisplay session={this.state.session} addclick={this.handleSessionIncrement} removeclick={this.handleSessionDecrement}/>
         <Timer timer={this.state.timer} label={this.state.cycle} running={this.state.running} click={this.handleTimer} reset={this.reset} session={this.state.session}/>
         <audio id="beep" preload="auto" 
-          src="https://goo.gl/65cBl1" />
+          src={Beep} />
       </div>
     );
   }
