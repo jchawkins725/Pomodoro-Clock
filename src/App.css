@@ -15,7 +15,7 @@ button svg {
 }
 
 body {
-  background: #FF6347;
+  background: #08081d;
 }
 
 .container {
@@ -53,7 +53,7 @@ body {
 .math {
   border-radius: 50%;
   padding: 6px;
-  background: #D9391C;
+  background: #f47344;
   cursor: pointer;
   border: none;
 }
@@ -98,7 +98,7 @@ body {
   border-radius: 50%;
   margin: 20px auto;
   padding: 2vh;
-  background: #D9391C;
+  background: #f47344;
   position: relative;
 }
 
