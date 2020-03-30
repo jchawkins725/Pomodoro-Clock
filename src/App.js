@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Beep from './beep.mp3';
+import {FaMinus, FaPlus, FaPause, FaPlay, FaRedo} from 'react-icons/fa'
 
 class BreakDisplay extends React.Component {
   render () {
@@ -9,9 +10,9 @@ class BreakDisplay extends React.Component {
         <div>
           <p className="small-titles" id="break-label">Break Length</p>
           <div className="small-flex">
-            <i id="break-decrement" className="fas fa-minus" onClick={this.props.removeclick}></i>
+            <button id="break-decrement" onClick={this.props.removeclick} className="math"><FaMinus /></button>
             <p id="break-length">{this.props.break}</p>
-           <i id="break-increment" className="fas fa-plus" onClick={this.props.addclick}></i>
+           <button id="break-increment" onClick={this.props.addclick} className="math"><FaPlus/></button>
          </div>
         </div>
       </div>
@@ -22,8 +23,8 @@ class Start extends React.Component {
   render () {
     return (
       <div className="start-container">
-        <i id="start_stop" onClick={this.props.click} className={`fas ${this.props.running ? "fa-pause" : "fa-play"}`}></i>
-        <i id="reset" className="fas fa-redo" onClick={this.props.reset}></i>
+        <button onClick={this.props.click} id="start_stop">{this.props.running ? <FaPause /> : <FaPlay />}</button>
+        <button onClick={this.props.reset} id="reset"><FaRedo/></button>
       </div>
     )
   }
@@ -35,9 +36,9 @@ class SessionDisplay extends React.Component {
         <div>
          <p id="session-label" className="small-titles">Session Length</p>
          <div className="small-flex">
-           <i id="session-decrement" className="fas fa-minus" onClick={this.props.removeclick}></i>
+           <button id="session-decrement" onClick={this.props.removeclick} className="math"><FaMinus /></button>
            <p id="session-length">{this.props.session}</p>
-           <i id="session-increment" className="fas fa-plus" onClick={this.props.addclick}></i>
+           <button id="session-increment" onClick={this.props.addclick} className="math"><FaPlus /></button>
          </div>
         </div>
       </div>

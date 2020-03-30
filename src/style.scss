@@ -8,6 +8,13 @@ $tomato: #FF6347;
   padding: 0px;
   color: white;
 }
+button {
+  border: none;
+  cursor: pointer;
+  svg {
+    vertical-align: middle;
+  }
+}
 body {
   background: $tomato;
 }
@@ -38,11 +45,16 @@ body {
 .small-titles {
   font-size: 20px;
 }
-.fas {
+.math {
   border-radius: 50%;
   padding: 6px;
   background: $darktomato;
   cursor: pointer;
+  border: none;
+  svg {
+    vertical-align: middle;
+    padding: 0px 1.5px;
+  }
 }
 #break-length {
   padding: 14px;

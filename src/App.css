@@ -1,33 +1,144 @@
-.App {
+* {
+  font-family: "Dosis", sans-serif;
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 0px;
+  padding: 0px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  border: none;
+  cursor: pointer;
+}
+button svg {
+  vertical-align: middle;
 }
 
-@keyframes App-logo-spin {
+body {
+  background: #FF6347;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.title {
+  width: 100%;
+  font-size: 45px;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+.flex {
+  display: flex;
+  width: 200px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.small-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  font-size: 14px;
+}
+
+.small-titles {
+  font-size: 20px;
+}
+
+.math {
+  border-radius: 50%;
+  padding: 6px;
+  background: #D9391C;
+  cursor: pointer;
+  border: none;
+}
+.math svg {
+  vertical-align: middle;
+  padding: 0px 1.5px;
+}
+
+#break-length {
+  padding: 14px;
+  font-size: 30px;
+}
+
+#session-length {
+  padding: 14px;
+  font-size: 30px;
+}
+
+#start_stop {
+  font-size: 5vh;
+  padding: 0px;
+  background: none;
+}
+
+.start-container {
+  margin-top: 1vh;
+}
+
+.timer-container {
+  width: 100%;
+}
+
+#timer-label {
+  margin-top: 6vh;
+  font-size: 5vh;
+}
+
+.timer-display {
+  width: 50vh;
+  height: 50vh;
+  border: solid white 5px;
+  border-radius: 50%;
+  margin: 20px auto;
+  padding: 2vh;
+  background: #D9391C;
+  position: relative;
+}
+
+#time-left {
+  font-size: 18vh;
+}
+
+#reset {
+  font-size: 5vh;
+  margin-left: 10px;
+  background: none;
+}
+
+@keyframes rotate {
   from {
-    transform: rotate(0deg);
+    transform: rotate(0deg) translateY(-27vh);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(360deg) translateY(-27vh);
   }
 }
+.arrow {
+  content: "";
+  position: absolute;
+  top: calc(50% - 10px);
+  left: calc(50% - 10px);
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent transparent white transparent;
+  transform: translateY(-27vh);
+}
+
+.arrow-play {
+  animation: rotate 60s infinite linear;
+  animation-play-state: running;
+}
+
+.arrow-pause {
+  animation: rotate 60s infinite linear;
+  animation-play-state: paused;
+}
+
+/*# sourceMappingURL=App.css.map */
